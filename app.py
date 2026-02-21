@@ -22,6 +22,12 @@ def support():
 def privacy():
     return render_template('privacy.html')
 
+##################### SOLUTIONS ############################
+
+@app.route('/solutions')
+def solutions_all():
+    return render_template('services/solutions-index.html')
+
 @app.route('/services/managed-network-wifi-solutions')
 def managed_network():
     return render_template('services/managed-network-wifi-solutions.html')
@@ -72,6 +78,10 @@ def industry_multifamily():
 @app.route('/case-studies')
 def case_studies():
     return render_template('case-studies.html')
+
+@app.route("/quote")
+def quote():
+    return render_template('quote.html')
 
 # @app.route('/managed-network-wifi-solutions')
 # def managed_network():
