@@ -1,0 +1,191 @@
+{% extends "layout.html" %}
+
+{% block title %}Managed Network & WiFi Solutions | KLOUDTECK{% endblock %}
+
+{% block head %}
+<style>
+    /* Service Hero */
+    .service-hero {
+        padding: 160px 0 80px;
+        background: #030712;
+        position: relative;
+    }
+
+    /* Grid Section */
+    .content-section {
+        padding: 60px 0 100px;
+        background: #030712;
+    }
+
+    /* Feature Cards - Simplified & Solid Visibility */
+    .feature-card {
+        background: #111827; /* Solid Dark Background */
+        border: 1px solid #1e293b;
+        border-radius: 20px;
+        padding: 35px;
+        height: 100%;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        display: block !important; /* Force Display */
+        visibility: visible !important; /* Force Visibility */
+        opacity: 1 !important; /* Force Opacity */
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        border-color: #3b82f6;
+        background: #1f2937;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(59, 130, 246, 0.2);
+        color: #3b82f6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .feature-card h4 {
+        color: #ffffff;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .feature-card p {
+        color: #94a3b8;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .text-gradient {
+        background: linear-gradient(90deg, #fff, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .tagline-box {
+        border-left: 4px solid #3b82f6;
+        padding-left: 20px;
+        margin: 30px 0;
+    }
+
+    /* Industry Tags */
+    .industry-tag {
+        display: inline-block;
+        padding: 6px 16px;
+        background: rgba(59, 130, 246, 0.1);
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        border-radius: 50px;
+        color: #3b82f6;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="service-hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1 class="display-4 fw-bold text-white mb-4">Managed Network & <br><span class="text-gradient">WiFi Solutions</span></h1>
+                <p class="fs-5 text-muted mb-4">
+                    Connectivity is the foundation of modern business operations. KLOUDTECK designs and manages secure, high-performance networks built for commercial environments.
+                </p>
+                <div>
+                    <span class="industry-tag">Hospitality</span>
+                    <span class="industry-tag">Retail</span>
+                    <span class="industry-tag">Warehouses</span>
+                </div>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block">
+                <div style="width:100%; height:300px; background:rgba(59,130,246,0.1); border-radius:30px; border:1px dashed #3b82f6; display:flex; align-items:center; justify-content:center;">
+                    <i class="fas fa-network-wired fa-5x text-primary opacity-25"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <h2 class="text-white fw-bold">Reliable. Fast. Secure.</h2>
+                <p class="text-muted">From high-density hospitality deployments to warehouse-wide wireless coverage, we engineer networks that deliver reliability, speed, and security.</p>
+                <div class="tagline-box">
+                    <h4 class="text-white fw-bold">Built for scale. Designed for uptime.</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6 Feature Cards - NO ANIMATION for stability -->
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                    <h4>Enterprise WiFi</h4>
+                    <p>High-capacity access points for seamless roaming and 100% property coverage.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>VLAN Segmentation</h4>
+                    <p>Isolating Guest, Staff, and POS traffic for maximum cybersecurity and protection.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h4>Fiber Backbone</h4>
+                    <p>Future-proof fiber optic infrastructure for high-bandwidth business demands.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <h4>Cybersecurity</h4>
+                    <p>Advanced firewalls and encryption protocols to guard your business data.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>Optimization & QoS</h4>
+                    <p>Prioritizing critical business applications for zero-lag performance.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-eye"></i></div>
+                    <h4>24/7 Monitoring</h4>
+                    <p>Proactive remote support to resolve network issues before they affect you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Simple CTA -->
+<section class="pb-5">
+    <div class="container">
+        <div class="p-5 rounded-4 text-center" style="background: #3b82f6;">
+            <h2 class="text-white fw-bold">Ready to Upgrade?</h2>
+            <p class="text-white opacity-75 mb-4">Get a custom designed network solution tailored for your facility.</p>
+            <button class="btn btn-light rounded-pill px-5 fw-bold">Contact Us Today</button>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<!-- No GSAP here to ensure visibility -->
+{% endblock %}

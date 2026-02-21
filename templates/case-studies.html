@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block title %}Case Studies – KLOUDTECK Success Stories{% endblock %}
+
+{% block head %}
+  <meta name="description" content="See how KLOUDTECK has helped hospitality, retail, and warehouse clients improve security, connectivity, and operations.">
+  <link rel="canonical" href="https://www.kloudteck.com/case-studies/">
+  
+  <style>
+    .filter-btn.active {
+      background: var(--teal) !important;
+      color: white !important;
+      border-color: var(--teal) !important;
+    }
+    /* Smooth transition for filtering */
+    .case-card {
+      transition: all 0.3s ease;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero" style="padding: 100px 0 60px;">
+      <div class="container">
+        <h1 class="display-lead">Success stories</h1>
+        <p class="lead">Real results for real businesses.</p>
+      </div>
+    </section>
+
+    <!-- FILTER & GRID SECTION -->
+    <section class="container my-5">
+      <!-- Filter Buttons -->
+      <div class="d-flex flex-wrap gap-2 mb-4">
+        <button class="btn btn-outline-teal filter-btn active" data-filter="all">All</button>
+        <button class="btn btn-outline-teal filter-btn" data-filter="hospitality">Hospitality</button>
+        <button class="btn btn-outline-teal filter-btn" data-filter="retail">Retail</button>
+        <button class="btn btn-outline-teal filter-btn" data-filter="warehouse">Warehouse</button>
+        <button class="btn btn-outline-teal filter-btn" data-filter="network">Network</button>
+        <button class="btn btn-outline-teal filter-btn" data-filter="security">Security</button>
+      </div>
+
+      <!-- Case Studies Grid -->
+      <div class="row g-4" id="caseStudiesGrid">
+        <!-- Card 1 -->
+        <div class="col-md-4 case-card hospitality network">
+          <div class="service-card">
+            <span class="badge bg-teal mb-2" style="background: var(--teal);">Hospitality</span>
+            <h4>Hotel chain reduces downtime by 40%</h4>
+            <p>Managed network and surveillance upgrade for 12 properties.</p>
+            <a href="#" class="small text-teal">Read more →</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 case-card retail security">
+          <div class="service-card">
+            <span class="badge bg-teal mb-2" style="background: var(--teal);">Retail</span>
+            <h4>Loss prevention with AI cameras</h4>
+            <p>Integrated CCTV and access control for 50+ stores.</p>
+            <a href="#" class="small text-teal">Read more →</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 case-card warehouse network">
+          <div class="service-card">
+            <span class="badge bg-teal mb-2" style="background: var(--teal);">Warehouse</span>
+            <h4>Fiber backbone for 1M sq ft DC</h4>
+            <p>Structured cabling and WiFi for seamless logistics.</p>
+            <a href="#" class="small text-teal">Read more →</a>
+          </div>
+        </div>
+        
+        <!-- আরো কার্ড ভবিষ্যতে এখানে যোগ করতে পারবেন -->
+      </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.case-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          if (filterValue === 'all') {
+            card.style.display = 'block';
+          } else {
+            // Check if the card has the class corresponding to the filter
+            if (card.classList.contains(filterValue)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+  });
+</script>
+{% endblock %}

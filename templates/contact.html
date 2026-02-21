@@ -1,0 +1,178 @@
+{% extends "layout.html" %}
+
+{% block title %}Contact KLOUDTECK – Start Your IT Infrastructure Project{% endblock %}
+
+{% block head %}
+  <meta name="description" content="Reach out for a free consultation or project quote. Fill out our detailed intake form and we’ll respond within 4 hours.">
+  <link rel="canonical" href="https://www.kloudteck.com/contact.html">
+{% endblock %}
+
+{% block content %}
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero" style="padding: 100px 0 60px;">
+      <div class="container">
+        <h1 class="display-lead">Start your project</h1>
+        <p class="lead">Complete the form below and we'll get back to you within 4 hours.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="container my-5">
+      <div class="contact-form">
+        <!-- Multi-step form -->
+        <form id="multiStepForm">
+          <!-- Step indicators -->
+          <div class="step-indicator">
+            <span class="step" id="stepIndicator1">1</span>
+            <span class="step" id="stepIndicator2">2</span>
+            <span class="step" id="stepIndicator3">3</span>
+            <span class="step" id="stepIndicator4">4</span>
+          </div>
+
+          <!-- Step 1: Basic information -->
+          <div id="step1">
+            <h3>Basic information</h3>
+            <div class="mb-3"><input type="text" class="form-control" name="fullname" placeholder="Full name *" required></div>
+            <div class="mb-3"><input type="email" class="form-control" name="email" placeholder="Work email *" required></div>
+            <div class="mb-3"><input type="tel" class="form-control" name="phone" placeholder="Phone"></div>
+            <div class="mb-3"><input type="text" class="form-control" name="company" placeholder="Company / Property name *" required></div>
+            <div class="mb-3"><input type="text" class="form-control" name="role" placeholder="Role/Title"></div>
+            <button type="button" class="btn btn-teal next-step">Next</button>
+          </div>
+
+          <!-- Step 2: Business context -->
+          <div id="step2" style="display:none;">
+            <h3>Business context</h3>
+            <div class="mb-3">
+              <select class="form-select" name="industry" required>
+                <option value="">Industry *</option>
+                <option>Hospitality</option>
+                <option>Retail</option>
+                <option>Warehouse</option>
+                <option>Multi-Family</option>
+                <option>Commercial/Office</option>
+              </select>
+            </div>
+            <div class="mb-3"><input type="text" class="form-control" name="locations" placeholder="Number of sites/locations *" required></div>
+            <div class="mb-3"><input type="text" class="form-control" name="citystate" placeholder="City/State"></div>
+            <div class="mb-3"><input type="text" class="form-control" name="propertysize" placeholder="Property size (rooms/sq ft)"></div>
+            <button type="button" class="btn btn-outline-teal prev-step">Previous</button>
+            <button type="button" class="btn btn-teal next-step">Next</button>
+          </div>
+
+          <!-- Step 3: Technical needs -->
+          <div id="step3" style="display:none;">
+            <h3>Technical needs</h3>
+            <div class="mb-3">
+              <label>Select services:</label>
+              <div class="chip-group">
+                <div class="chip" data-value="network">Managed Network & Wi-Fi</div>
+                <div class="chip" data-value="cctv">CCTV & Surveillance</div>
+                <div class="chip" data-value="access">Access Control</div>
+                <div class="chip" data-value="cabling">Structured Cabling & Fiber</div>
+                <div class="chip" data-value="voip">VoIP Phone System</div>
+                <div class="chip" data-value="tv">TV & Digital Display</div>
+              </div>
+              <input type="hidden" name="services" id="servicesInput">
+            </div>
+            <div class="mb-3">
+              <label>Current challenges (select all that apply):</label>
+              <div class="chip-group">
+                <div class="chip" data-value="slowwifi">Slow WiFi</div>
+                <div class="chip" data-value="deadzones">Dead zones</div>
+                <div class="chip" data-value="security">Security incidents</div>
+                <div class="chip" data-value="cabling">Outdated cabling</div>
+                <div class="chip" data-value="remote">No remote monitoring</div>
+                <div class="chip" data-value="tickets">High support tickets</div>
+                <div class="chip" data-value="compliance">Compliance</div>
+              </div>
+              <input type="hidden" name="challenges" id="challengesInput">
+            </div>
+            <div class="mb-3"><textarea class="form-control" name="currentsetup" placeholder="Current setup (vendor names, equipment, ISP, etc.)"></textarea></div>
+            <button type="button" class="btn btn-outline-teal prev-step">Previous</button>
+            <button type="button" class="btn btn-teal next-step">Next</button>
+          </div>
+
+          <!-- Step 4: Timeline & budget -->
+          <div id="step4" style="display:none;">
+            <h3>Timeline & budget</h3>
+            <div class="mb-3">
+              <select class="form-select" name="timeline" required>
+                <option value="">Timeline *</option>
+                <option>ASAP</option>
+                <option>30 days</option>
+                <option>60-90 days</option>
+                <option>Planning</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <select class="form-select" name="budget">
+                <option value="">Budget range (optional)</option>
+                <option>$10k-$25k</option>
+                <option>$25k-$50k</option>
+                <option>$50k-$100k</option>
+                <option>$100k+</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <select class="form-select" name="contactmethod">
+                <option value="">Preferred contact method</option>
+                <option>Email</option>
+                <option>Phone</option>
+                <option>WhatsApp</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-outline-teal prev-step">Previous</button>
+            <button type="submit" class="btn btn-teal">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Map placeholder -->
+    <section class="container my-5">
+      <div style="background: var(--gray-light); border-radius: 40px; padding: 60px; text-align: center;">
+        <i class="fas fa-map-marked-alt fa-3x mb-3" style="color: var(--teal);"></i>
+        <h4>KLOUDTECK Headquarters</h4>
+        <p>7 Technology Drive, Suite 400, Irvine, CA 92618</p>
+        <p>Sales: (888) 456-8324</p>
+      </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  // মাল্টি-স্টেপ ফর্মের লজিক (যদি আপনার app.js এ না থাকে)
+  document.querySelectorAll('.next-step').forEach(button => {
+    button.addEventListener('click', () => {
+      const currentStep = button.parentElement;
+      const nextStep = currentStep.nextElementSibling;
+      if (nextStep) {
+        currentStep.style.display = 'none';
+        nextStep.style.display = 'block';
+      }
+    });
+  });
+
+  document.querySelectorAll('.prev-step').forEach(button => {
+    button.addEventListener('click', () => {
+      const currentStep = button.parentElement;
+      const prevStep = currentStep.previousElementSibling;
+      if (prevStep) {
+        currentStep.style.display = 'none';
+        prevStep.style.display = 'block';
+      }
+    });
+  });
+
+  // চিপস (Chips) সিলেকশন লজিক
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      chip.classList.toggle('active');
+      // এখানে আপনি ইনপুট ভ্যালু আপডেট করার কোড যোগ করতে পারেন
+    });
+  });
+</script>
+{% endblock %}

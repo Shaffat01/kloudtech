@@ -1,0 +1,217 @@
+{% extends "layout.html" %}
+
+{% block title %}Industries We Serve · Technology Solutions by Sector | KLOUDTECK{% endblock %}
+
+{% block head %}
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Industry-specific technology solutions for hospitality, retail, warehouses, multi-family communities, and commercial offices. Tailored IT infrastructure and security systems.">
+  <link rel="canonical" href="https://www.kloudteck.com/industries/">
+  <meta property="og:title" content="Industries We Serve · Technology Solutions by Sector">
+  <meta property="og:description" content="Industry-specific technology solutions for hospitality, retail, warehouses, multi-family communities, and commercial offices.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.kloudteck.com/industries/">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Service",
+        "position": 1,
+        "name": "Hospitality Technology Solutions",
+        "url": "https://www.kloudteck.com/industries/hospitality/"
+      },
+      {
+        "@type": "Service",
+        "position": 2,
+        "name": "Retail Technology Solutions",
+        "url": "https://www.kloudteck.com/industries/retail/"
+      },
+      {
+        "@type": "Service",
+        "position": 3,
+        "name": "Warehouse Technology Solutions",
+        "url": "https://www.kloudteck.com/industries/warehouses-distribution/"
+      }
+    ]
+  }
+  </script>
+{% endblock %}
+
+{% block content %}
+  <!-- Scroll Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="scrollProgress"></div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header" style="background: #f8f9fa; padding: 60px 0;">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="/industries" class="text-decoration-none">Industries </a></li>
+        </ol>
+      </nav>
+      <h1 class="display-4 fw-bold">Industries We Serve</h1>
+      <p class="lead text-secondary">Tailored technology solutions for complex commercial environments</p>
+    </div>
+  </section>
+
+  <!-- INTRO SECTION -->
+  <section class="container my-5">
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto text-center">
+        <p class="fs-5 text-secondary">Every industry has unique operational challenges and technology requirements. KLOUDTECK delivers specialized solutions designed for the specific demands of your sector.</p>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      <!-- Hospitality -->
+      <div class="col-md-6 col-lg-4">
+        <div class="industry-card h-100 shadow-sm border rounded-4 overflow-hidden">
+          <div class="industry-card-header p-4 text-white text-center" style="background: linear-gradient(135deg, #0F2A4A 0%, #1e3a5f 100%);">
+            <i class="fas fa-hotel fa-3x mb-3"></i>
+            <h3 class="mb-0">Hospitality</h3>
+          </div>
+          <div class="industry-card-body p-4">
+            <p class="text-secondary">Hotels, resorts, and casinos demand seamless guest experiences, secure operations, and efficient management.</p>
+            <h5 class="mt-4 fw-bold">Key Solutions:</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-wifi text-teal me-2"></i> High-density guest WiFi</li>
+              <li class="mb-2"><i class="fas fa-tv text-teal me-2"></i> IPTV with PMS integration</li>
+              <li class="mb-2"><i class="fas fa-phone-alt text-teal me-2"></i> Hospitality VoIP systems</li>
+              <li class="mb-2"><i class="fas fa-video text-teal me-2"></i> Hotel security cameras</li>
+              <li class="mb-2"><i class="fas fa-door-open text-teal me-2"></i> Keyless entry systems</li>
+            </ul>
+            <a href="/industries/hospitality" class="btn btn-outline-teal mt-3 w-100">Explore Hospitality Solutions →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Retail -->
+      <div class="col-md-6 col-lg-4">
+        <div class="industry-card h-100 shadow-sm border rounded-4 overflow-hidden">
+          <div class="industry-card-header p-4 text-white text-center" style="background: linear-gradient(135deg, #00B4B3 0%, #008c8b 100%);">
+            <i class="fas fa-store fa-3x mb-3"></i>
+            <h3 class="mb-0">Retail</h3>
+          </div>
+          <div class="industry-card-body p-4">
+            <p class="text-secondary">From single stores to multi-location chains, retailers need reliable technology that drives sales and prevents loss.</p>
+            <h5 class="mt-4 fw-bold">Key Solutions:</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-wifi text-teal me-2"></i> POS network infrastructure</li>
+              <li class="mb-2"><i class="fas fa-video text-teal me-2"></i> Theft prevention CCTV</li>
+              <li class="mb-2"><i class="fas fa-door-open text-teal me-2"></i> Employee access control</li>
+              <li class="mb-2"><i class="fas fa-tv text-teal me-2"></i> Digital signage promotions</li>
+              <li class="mb-2"><i class="fas fa-chart-line text-teal me-2"></i> People counting analytics</li>
+            </ul>
+            <a href="/industries/retail" class="btn btn-outline-teal mt-3 w-100">Explore Retail Solutions →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Warehouses & Distribution -->
+      <div class="col-md-6 col-lg-4">
+        <div class="industry-card h-100 shadow-sm border rounded-4 overflow-hidden">
+          <div class="industry-card-header p-4 text-white text-center" style="background: linear-gradient(135deg, #FF6B6B 0%, #ff5252 100%);">
+            <i class="fas fa-warehouse fa-3x mb-3"></i>
+            <h3 class="mb-0">Warehouses</h3>
+          </div>
+          <div class="industry-card-body p-4">
+            <p class="text-secondary">Distribution centers require rugged, reliable infrastructure for inventory management and worker safety.</p>
+            <h5 class="mt-4 fw-bold">Key Solutions:</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-wifi text-teal me-2"></i> Warehouse-wide wireless</li>
+              <li class="mb-2"><i class="fas fa-video text-teal me-2"></i> Loading dock surveillance</li>
+              <li class="mb-2"><i class="fas fa-door-open text-teal me-2"></i> Industrial access control</li>
+              <li class="mb-2"><i class="fas fa-cable-car text-teal me-2"></i> Fiber backbone installation</li>
+              <li class="mb-2"><i class="fas fa-phone-alt text-teal me-2"></i> Hands-free communication</li>
+            </ul>
+            <a href="/industries/warehouses-distribution" class="btn btn-outline-teal mt-3 w-100">Explore Warehouse Solutions →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Multi-Family & Communities -->
+      <div class="col-md-6 col-lg-4">
+        <div class="industry-card h-100 shadow-sm border rounded-4 overflow-hidden">
+          <div class="industry-card-header p-4 text-white text-center" style="background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);">
+            <i class="fas fa-building fa-3x mb-3"></i>
+            <h3 class="mb-0">Multi-Family</h3>
+          </div>
+          <div class="industry-card-body p-4">
+            <p class="text-secondary">Apartment communities and HOAs need secure access, reliable connectivity, and amenity technology.</p>
+            <h5 class="mt-4 fw-bold">Key Solutions:</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-wifi text-teal me-2"></i> Community WiFi</li>
+              <li class="mb-2"><i class="fas fa-door-open text-teal me-2"></i> Property-wide access control</li>
+              <li class="mb-2"><i class="fas fa-video text-teal me-2"></i> Common area surveillance</li>
+              <li class="mb-2"><i class="fas fa-phone-alt text-teal me-2"></i> Intercom systems</li>
+              <li class="mb-2"><i class="fas fa-tv text-teal me-2"></i> Amenity room displays</li>
+            </ul>
+            <a href="/industries/multi-family-communities" class="btn btn-outline-teal mt-3 w-100">Explore Multi-Family Solutions →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Commercial & Office -->
+      <div class="col-md-6 col-lg-4">
+        <div class="industry-card h-100 shadow-sm border rounded-4 overflow-hidden">
+          <div class="industry-card-header p-4 text-white text-center" style="background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);">
+            <i class="fas fa-chart-pie fa-3x mb-3"></i>
+            <h3 class="mb-0">Commercial Office</h3>
+          </div>
+          <div class="industry-card-body p-4">
+            <p class="text-secondary">Modern offices require flexible, secure technology that supports hybrid work and productivity.</p>
+            <h5 class="mt-4 fw-bold">Key Solutions:</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-wifi text-teal me-2"></i> Enterprise WiFi</li>
+              <li class="mb-2"><i class="fas fa-door-open text-teal me-2"></i> Conference room scheduling</li>
+              <li class="mb-2"><i class="fas fa-phone-alt text-teal me-2"></i> Cloud VoIP phone system</li>
+              <li class="mb-2"><i class="fas fa-video text-teal me-2"></i> Office security cameras</li>
+              <li class="mb-2"><i class="fas fa-cable-car text-teal me-2"></i> Structured cabling</li>
+            </ul>
+            <a href="/industries/commercial-office" class="btn btn-outline-teal mt-3 w-100">Explore Office Solutions →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIT BANNER SECTION -->
+  <section class="container my-5">
+    <div class="audit-banner p-5 rounded-5" style="background: linear-gradient(105deg, var(--coral), #ff8f7a); color: white;">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <span class="badge bg-white text-dark px-4 py-2 mb-3 rounded-pill"><i class="fas fa-clipboard-check me-2 text-coral"></i> No obligation</span>
+          <h3 class="fw-bold">Not sure what your industry needs?</h3>
+          <p class="lead mb-0">Schedule a free 30-minute consultation with our industry specialists.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+          <a href="/contact" class="btn btn-white" style="background: white; color: var(--navy); padding: 12px 30px; border-radius: 50px; font-weight: bold;">Book consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/1XXXXXXXXXX?text=Hi%20KLOUDTECK%2C%20I%20need%20help%20with%20industry%20solutions" class="whatsapp-float" target="_blank" style="position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000;">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  // Scroll Progress Logic
+  window.onscroll = function() {
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    let progressBar = document.getElementById("scrollProgress");
+    if (progressBar) progressBar.style.width = scrolled + "%";
+  };
+</script>
+{% endblock %}
